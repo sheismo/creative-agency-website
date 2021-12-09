@@ -1,3 +1,7 @@
+if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+    document.documentElement.setAttribute('dark', true)
+}
+
 const menu = document.querySelector('.bi-list');
 const close = document.querySelector('.bi-x')
 const navigation = document.querySelector('.navigation');
@@ -8,12 +12,14 @@ menu.addEventListener('click', () => {
     close.style.display = 'block';
     section.style.display ='none'
     navigation.style.display= 'flex';
-})
+});
 
 close.addEventListener('click', () => {
     close.style.display = 'none';
     menu.style.display = 'block';
     navigation.style.display = 'none';
     section.style.display ='block'
-})
+});
+
+
 

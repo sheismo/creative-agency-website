@@ -7,6 +7,16 @@
     --secondary-color: #1b206e;
 }
 
+html{
+    --color: #000;
+    --bg-color: #fff;
+}
+
+html[dark]{
+    --color: #fff;
+    --bg-color: #000;
+}
+
 /* BASE STYLING */
 *{
     margin:0;
@@ -77,7 +87,7 @@ section.home{
     z-index: 20;
     cursor: pointer;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .bi-x{
@@ -236,7 +246,7 @@ section.home{
 .contact{
     position: relative;
     width: 100%;
-    margin-top: 30px;
+    margin: 50px auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -281,7 +291,7 @@ section.home{
     resize: none
 }
 
-.contact-form .row text-area{
+.contact-form .row textarea{
     height: 150px;
 }
 
@@ -298,7 +308,7 @@ section.home{
 .contact-info{
     width: 350px;
     background: #f9f9f9;
-    padding: 60px 40px 20px;
+    padding: 25px 40px 15px;
 }
 
 .contact-info .info-box{
@@ -376,4 +386,19 @@ section.home{
     .services .service{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        color: var(--color);
+        background-color: var(--bg-color);
+    }
+
+    .navigation{
+        background: var(--bg-color);
+    }
+
+    .navigation ul li a{
+        color: var(--color)
+    }
 }
