@@ -69,10 +69,11 @@ section.home{
     transform: scale(0.98);
 }
 
+/* Logo */
 .logo{
     position:absolute;
-    top: 30px;
-    left: 100px;
+    top: 10px;
+    left: 25px;
     font-size: 2rem;
     font-weight: 700;
     z-index:20;
@@ -87,7 +88,7 @@ section.home{
     z-index: 20;
     cursor: pointer;
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .bi-x{
@@ -131,6 +132,7 @@ section.home{
     position: relative;
     list-style: none;
     text-align: center;
+    margin-bottom: 8px;
 }
 
 .navigation ul li a{
@@ -160,15 +162,17 @@ section.home{
     transform: scale(0.7)
 }
 
-.navigation .email-icon{
+.navigation .social-bar .email-icon{
     position: absolute;
     bottom: 20px;
-    transform: scale(0.7);
+    transform: scale(0.9);
+    color: var(--primary-color);
 }
 
 /*SERVICES PAGE*/
 .services{
     margin-top: 40px;
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -176,19 +180,24 @@ section.home{
 }
 
 .services .service{
-    padding: 30px;
+    padding: 20px;
     background: #f4f4f4;
+    border-radius: 20px;
 }
 
 .services .service:hover{
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 2px var(--primary-color);
 }
 
 .services .service h2{
     font-size: 24px;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px;
     color: var(--secondary-color);
+}
+
+.services .service p{
+    color: var(--bg-color);
 }
 
 .services .service .icon i{
@@ -199,22 +208,24 @@ section.home{
 
 /*WORK PAGE*/
 .portfolio{
+    margin-top: 20px;
+    padding: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center ;
-    margin-top: 20px;
+    justify-content: center;
 }
 
 .portfolio .item{
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 5px;
+    width: 280px;
+    height: 280px;
+    margin: 10px;
 }
 
 .portfolio .item img{
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 
 .portfolio .item .action{
@@ -223,7 +234,7 @@ section.home{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,6 +258,7 @@ section.home{
     position: relative;
     width: 100%;
     margin: 50px auto;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -293,6 +305,10 @@ section.home{
 
 .contact-form .row textarea{
     height: 150px;
+}
+
+.contact-form .row input:focus, .contact-form .row textarea:focus{
+    border: 1px solid var(--secondary-color);;
 }
 
 .contact-form .row input[type='submit'] {
