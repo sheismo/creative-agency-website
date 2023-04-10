@@ -197,7 +197,7 @@ section.home{
 }
 
 .services .service p{
-    color: var(--bg-color);
+    color: var(--color);
 }
 
 .services .service .icon i{
